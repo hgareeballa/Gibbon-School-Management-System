@@ -1,4 +1,6 @@
-This is a docker image with Gibbon school management system installed with all required installation requests
+This is a docker image with Gibbon school management system installed with all required installation requests:
+Docker hub:
+docker pull sudane/sms:latest
 
 Apache 2 (with mod_rewrite)
 PHP 7.3 or above (with PDO, gettext, CURL, GD, ZIP. Recommended to turn display_errors off.)
@@ -18,3 +20,6 @@ And then run the below commands to start apache2 and mysql !
 systemctl start apache2 systemctl status apache2
 
 systemctl start mysql systemctl status mysql
+
+
+
