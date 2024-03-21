@@ -5,6 +5,7 @@ services:
     stdin_open: true
     ports:
       - 8081:80
-    container_name: gibbon-school-management-system
+    command: /usr/sbin/apache2ctl -D FOREGROUND
+    container_name: gibbon-school-management-system    
     image: sudane/sms:latest
 networks: {}
