@@ -14,30 +14,20 @@ Option1: Using Docker Compose start command:
 command:
 docker compose up -d
 
-and then start mysql service via:
-docker exec container-name service mysql start 
-or
-service mysql start
+and then start mysql & apache2 service via:
+from inside the container:
+/etc/init.d/mysql start
+/etc/init.d/apache2 start
 
 Option2: Using docker run command 
 Command :
 docker run -ti -p 8080:80 --name container-name sudane/sms:latest
 
 Once the container starts, run below commands from within the container :
-to connect to the running container:
-docker exec -ti container-name bash
+from inside the container:
+/etc/init.d/mysql start
+/etc/init.d/apache2 start
 
-And then run the below commands to start apache2 and mysql !
-systemctl start apache2 systemctl status apache2
-systemctl start mysql systemctl status mysql
-
-
-Or Run the service directly from docker once the container starts:
-docker exec container-name service apache2 start
-docker exec container-name service mysql start 
-
-or service mysql start
-service apache2 start
 
 
 
