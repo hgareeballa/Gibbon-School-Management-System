@@ -8,11 +8,22 @@ MySQL 5.6 (collation set to utf8_general_ci)  (default MySQL root password = oko
 
 You can download and run the image with the below command, exposing the required port 8080 (you can change it to what ever you want) and once the container starts, You will need to connect to the container and start apache2 and MySQL services, and you should be good to go
 
+Two Options to Start the contaner:
+
+Option1: Using Docker Compose start command:
+command:
+docker compose up -d
+
+and then start mysql service via:
+docker exec container-name service mysql start 
+or
+service mysql start
+
+Option2: Using docker run command 
 Command :
 docker run -ti -p 8080:80 --name container-name sudane/sms:latest
 
 Once the container starts, run below commands from within the container :
-
 to connect to the running container:
 docker exec -ti container-name bash
 
@@ -24,6 +35,10 @@ systemctl start mysql systemctl status mysql
 Or Run the service directly from docker once the container starts:
 docker exec container-name service apache2 start
 docker exec container-name service mysql start 
+
+or service mysql start
+service apache2 start
+
 
 
 
