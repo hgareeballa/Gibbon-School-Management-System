@@ -18,8 +18,12 @@ docker exec -ti container-name bash
 
 And then run the below commands to start apache2 and mysql !
 systemctl start apache2 systemctl status apache2
-
 systemctl start mysql systemctl status mysql
+
+
+Or Run the service directly from docker once the container starts:
+docker exec container-name service apache2 start
+docker exec container-name service mysql start 
 
 
 
