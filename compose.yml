@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  sms:
+    tty: true
+    stdin_open: true
+    ports:
+      - 8081:80
+    container_name: gibbon-school-management-system
+    image: sudane/sms:latest
+networks: {}
